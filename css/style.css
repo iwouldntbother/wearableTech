@@ -84,7 +84,7 @@ body {
 #productContainer {
     width: 100vw;
     height: 100vh;
-    background-color: #999;
+    background-color: #222222;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -92,7 +92,7 @@ body {
 }
 
 #productTextHolder {
-    color: #222;
+    color: white;
 }
 
 #productTextHolder p {
@@ -129,4 +129,29 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+#aboutHolder {
+    color: white;
+}
+
+
+/* Story Page */
+
+#storyContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: darkgreen;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#storyHolder {
+    color: white;
+}
+
+#storyHolder p {
+    max-width: 40vw;
 }
