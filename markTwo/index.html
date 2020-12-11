@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Pearl</title>
+</head>
+<body>
+    <div id="homeContainer" class="container">
+        
+        <canvas id="mainCanvas"></canvas>
+        <div id="fadeOutContainer" class="container"></div>
+        <!-- <h1 id="homeTitle">The Pearl</h1> -->
+        <svg id="homeTitle" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 1057 166" style="enable-background:new 0 0 1057 166;" xml:space="preserve">
+        <style type="text/css">
+            .st0{fill:none;stroke:#000000;stroke-width:5;}
+            .st0:hover{fill:#000000;}
+        </style>
+        <g>
+            <path class="st0" d="M125.6,12.2v35.2H88v106.4H43.6V47.4H6.4V12.2H125.6z"/>
+            <path class="st0" d="M268.6,12.2v141.6h-44.4V98.6H182v55.2h-44.4V12.2H182v51h42.2v-51H268.6z"/>
+            <path class="st0" d="M333,47.4V65h44v33.4h-44v20h50v35.4h-94.4V12.2H383v35.2H333z"/>
+            <path class="st0" d="M478.2,108.8v45h-44.4V12.2h62c17.3,0,30.6,4.4,39.9,13.2c9.3,8.8,13.9,20.6,13.9,35.4c0,8.9-2.1,17-6.2,24.3
+                c-4.1,7.3-10.2,13-18.3,17.3c-8.1,4.3-17.8,6.4-29.3,6.4H478.2z M504.6,60.8c0-8.7-4.6-13-13.8-13h-12.6v26h12.6
+                C500,73.8,504.6,69.5,504.6,60.8z"/>
+            <path class="st0" d="M608,47.4V65h44v33.4h-44v20h50v35.4h-94.4V12.2H658v35.2H608z"/>
+            <path class="st0" d="M765.6,132.4h-47.2l-7,21.4h-46.6l51.8-141.6h51.2l51.6,141.6h-46.8L765.6,132.4z M754.8,99L742,59.6L729.2,99
+                H754.8z"/>
+            <path class="st0" d="M900.6,153.8L873.8,103v50.8h-44.4V12.2h66c11.5,0,21.3,2,29.4,6.1c8.1,4.1,14.2,9.6,18.3,16.6
+                c4.1,7,6.1,14.9,6.1,23.7c0,9.5-2.6,17.9-7.9,25.2c-5.3,7.3-12.8,12.6-22.7,15.8l30.8,54.2H900.6z M873.8,73.4h17.6
+                c4.3,0,7.5-1,9.6-2.9c2.1-1.9,3.2-5,3.2-9.1c0-3.7-1.1-6.7-3.3-8.8c-2.2-2.1-5.4-3.2-9.5-3.2h-17.6V73.4z"/>
+            <path class="st0" d="M1007.8,120.2h42.8v33.6h-87.2V12.2h44.4V120.2z"/>
+        </g>
+        </svg>
+        
+        <div id="scrollIndicator"></div>
+    </div>
+
+    <div id="productContainer">
+
+        <img src="images/Pearl.png">
+        
+        <div id="textHolder">
+
+        <div id="productTextHolder">
+            <h1>The Pearl</h1>
+            <p>The Pearl is a small implantable oyster card and tfl guide.<br>
+            It's implanted in the hand between the thumb and index finger,<br>
+            this can then be used to tap in and out of the London Underground.<br>
+            <br>
+            The built in LEDs guide the user on what line to take to get to their destination.</p>
+        </div>
+        
+    <!-- </div>
+
+    <div id="aboutContainer"> -->
+        <div id="aboutHolder">
+            <h1>Why?</h1>
+            <p>Crime rates are increasing on the London Underground,<br>
+            the most common of which is theft.<br>
+            <br>
+            Also the amount of passengers daily has been increasing over the last few years,<br>
+            this can put new travellers off, especially as its easy to get lost down there!<br>
+            <br>
+            Thats why The Pearl is implanted, you'd have to lose your hand to not get home!<br>
+            It also fatures built in LEDs to guide you on what line to take to get to your destination.</p>
+        </div>
+
+        </div>        
+
+    </div>
+
+    <div id="storyContainer">
+        <div id="storyHolder">
+            <h1>Our Story</h1>
+            <p>Here at WWSTWD Studios, I started the development of The Pearl roughly 5 years ago.
+            It all started with an Arduino, a breadboard and some components in my bedroom at university.
+            <br><br>
+            All together I went through roughly 100 Oyster cards, I had to use a real card due to legal reasons.
+            Then next came packaging that into a small pill-shaped injectable component.
+            Once I had that sorted I decided to play around with the idea of it lighting up to show it was being scanned.
+            I soon realised this was pointless as the barriers do this.
+            I then moved onto the idea of guiding the user with an RGB LED, it can display the colour of the line needed.
+            <br><br>
+            Next was powering the LED, the Oyster chip runs off power given to it by the barriers, I needed power for the
+            LEDs. The Pearl actually has tiny microscopic hairs that draw energy from the surrounding flesh and heat.
+            <br><br>
+            I have a background in web and app development so I threw together a small web app that could allow me to
+            program the journey and test it live!
+            The inital tests were rough, the lack of internet on the Underground was an issue initally but I soon moved
+            to a location based system. I refined the app and a few years later were here! Hundreds of people are walking
+            around with The Pearl in them, helping them get where they need to go, worry free!</p>
+        </div>
+    </div>
+
+    <div id="footerContainer">
+        <div id="footerLeft">
+            <p>
+                Made by: <a href="https://wwstwd.studio" target="_blank">wwstwd.studio</a>
+                <br>
+                For GCD1 - Unit 2 - Digital
+            </p>
+            
+        </div>
+        <div id="footerRight">
+            <p>
+                © 2020 Will Westwood All Rights Reserved
+            </p>
+        </div>
+    </div>
+
+
+    <!-- <div id="loadingPage">
+        <p id="terminalOutput"></p>
+        <h1></h1>
+    </div> -->
+
+    <script src="js/jquery-3.5.1.min.js"></script>
+    <!-- <script src="js/three.min.js"></script>
+    <script src="js/LuminosityHighPassShader.js"></script>
+    <script src="js/ConvolutionShader.js"></script>
+    <script src="js/CopyShader.js"></script>
+    <script src="js/ShaderPass.js"></script>
+    <script src="js/EffectComposer.js"></script>
+    <script src="js/RenderPass.js"></script>
+    <script src="js/UnrealBloomPass.js"></script>
+    <script src="js/OrbitControls.js"></script>
+    <script src="js/GLTFLoader.js"></script> -->
+    <script src="js/babylon.js"></script>
+    <script src="js/babylonjs.loaders.min.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
