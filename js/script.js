@@ -137,6 +137,7 @@ function createScene() {
     camera.minZ = 0.1;
     camera.lowerRadiusLimit = camera.upperRadiusLimit = camera.radius;
     camera.attachControl(canvas, true);
+    
     const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
     
     var gl = new BABYLON.GlowLayer("glow", scene);
@@ -149,6 +150,9 @@ function createScene() {
         }, 1000)
     })
 
+    if (window.matchMedia("(max-width: 700px)").matches) {
+        camera.detachControl()
+    }
 
     return scene;
 

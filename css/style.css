@@ -213,6 +213,10 @@ body {
         overflow-x: hidden;
     }
 
+    #mainCanvas {
+        pointer-events: none;
+    }
+
     #productContainer {
         display: flex;
         align-items: center;
