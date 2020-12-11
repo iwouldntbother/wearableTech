@@ -1,28 +1,27 @@
 body {
-    padding: 0;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
     overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Landing Page */
-
-#landingContainer {
+.container {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    background-image: url("../images/pearl.jpg");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    justify-content: center;
 }
 
-#landingTitle {
-    color: white;
-    font-size: 5vw;
+#homeContainer {
+    background: rgb(201,219,231);
+    background: radial-gradient(circle, rgba(201,219,231,1) 0%, rgba(148,187,233,1) 100%);
+}
+
+#homeTitle {
+    width: 70vw;
+    height: auto;
+    z-index: 10;
 }
 
 #scrollIndicator {
@@ -43,7 +42,7 @@ body {
     width: 4px;
     height: 4px;
     margin-left: -3px;
-    background-color:white;
+    background-color:#000000;
     border-radius: 2px;
     animation: mouse-wheel 2.5s cubic-bezier(0.77, 0, 0.175, 1) infinite;
 }
@@ -79,79 +78,192 @@ body {
     }
 }
 
-/* Product Page */
+#fadeOutContainer {
+    position: absolute;
+    background-color: white;
+    transition: opacity 1s;
+    pointer-events: none;
+}
+
+
+
+#infoContainer {
+    background-color: blue;
+}
+
+#mainCanvas {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
 
 #productContainer {
-    width: 100vw;
-    height: 100vh;
-    background-color: #222222;
-    overflow: hidden;
+    /* height: 100vh; */
     display: flex;
-    align-items: center;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center; 
+    /* justify-content: center; */
 }
+
+#productContainer img {
+    width: 30vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    height: auto;
+}
+
 
 #productTextHolder {
-    color: white;
-}
-
-#productTextHolder p {
-    padding-left: 3vw;
-}
-
-#productImageHolder {
-    width: 25vw;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    top: 100vh;
-    overflow: hidden;
-}
-
-#productImage {
-    width: 15vw;
-    height: 80vh;
-    background-image: url("../images/thePearl.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin-left: 10vw;
-    margin-top: 10vh;
-}
-
-/* About Page */
-
-#aboutContainer {
-    width: 100vw;
-    height: 100vh;
-    background-color: blue;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 45vw;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 
 #aboutHolder {
-    color: white;
+    width: 45vw;
+    margin-left: 5vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
 }
 
-
-/* Story Page */
+#aboutHolder h1, #productTextHolder h1 {
+    margin-left: -2vw;
+}
 
 #storyContainer {
     width: 100vw;
-    height: 100vh;
-    background-color: darkgreen;
-    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#storyHolder {
+    background-color: blue;
     color: white;
 }
 
+#storyHolder {
+    width: 60vw;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
+}
+
 #storyHolder p {
-    max-width: 40vw;
+    width: 100%;
+}
+
+#footerContainer {
+    width: 100vw;
+    background-color: black;
+    color: white;
+    padding: 1vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#footerContainer a:link, a:visited, a:active {
+    text-decoration: none;
+    color: gray;
+}
+
+#footerContainer p {
+    margin: 0;
+}
+
+#footerRight {
+    margin-right: 3vw;
+    color: gray;
+}
+
+
+#loadingPage {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background-color: #083952;
+    transition: opacity 0.5s;
+}
+
+#terminalOutput {
+    color: #f8f8f8;
+    margin: 0;
+    margin-left: 1vw;
+    margin-top: 0.5vw;
+    font-family: monospace;
+}
+
+.terminalTypeLine, .terminalResponseLine {
+    margin: 0;
+    white-space: pre;
+}
+
+.terminalTypeLine::before {
+    content: "$ ";
+}
+
+
+/* MOBILE */
+
+@media only screen and (max-width: 700px) {
+    
+    body {
+        overflow-x: hidden;
+    }
+
+    #productContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #productContainer img {
+        width: auto;
+        max-height: 80vh;
+        height: auto;
+    }
+    
+    
+    #productTextHolder {
+        width: 90vw;
+        margin: 0;
+        margin-top: 0;
+        margin-bottom: 5vw;
+    }
+    
+    #aboutHolder {
+        width: 90vw;
+        margin: 0;
+        margin-top: 10vw;
+        margin-bottom: 5vw;
+    }
+
+    #aboutHolder h1, #productTextHolder h1 {
+        margin-left: 0;
+    }
+
+    #storyHolder {
+        width: 80vw;
+        margin: 0;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+    #footerContainer {
+        width: 100vw;
+        background-color: black;
+        color: white;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* font-size: 2.5vw; */
+        padding: 0;
+        padding-top: 2vw;
+        padding-bottom: 2vw;
+    }
+
 }
