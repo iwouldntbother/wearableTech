@@ -169,6 +169,30 @@ window.addEventListener("resize", function () {
 });
 
 
+// 
+// Form
+// 
+
+let formContainer = document.getElementById("formContainer")
+let form = document.getElementById("interestForm")
+let name = document.getElementById("nameInput")
+let email = document.getElementById("emailInput")
+let comments = document.getElementById("commentsInput")
+
+document.getElementById("formButton").addEventListener("click", function(){
+    // console.log("Button Clicked!")
+    if (name.value == "" || email.value == "") {
+        document.getElementById("formError").innerHTML = "Required fields not filled"
+    } else {
+        form.remove();
+        formContainer.innerHTML += "<h1>Thank you for registering<br>your interest!</h1>"
+        // name.value = ""
+        // email.value = ""
+        // comments.value = ""
+    }
+    
+})
+
 
 // 
 // Loading Terminal

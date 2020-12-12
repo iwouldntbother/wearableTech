@@ -151,6 +151,79 @@ body {
     width: 100%;
 }
 
+
+#formContainer {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vw;
+    padding-bottom: 5vw;
+    background-color: #1e272e;
+    color: white;
+}
+
+#formContainer h1 {
+    margin: 0;
+    margin-bottom: 2vw;
+    text-align: center;
+}
+
+#formContainer p {
+    width: 28vw;
+    text-align: center;
+    font-size: 1vw;
+    margin: 0;
+    margin-bottom: 3vw;
+}
+
+#formContainer form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+}
+
+#formContainer form input {
+    margin-bottom: 1vw;
+    background-color: #485460;
+    border: none;
+    color: white;
+}
+
+#formContainer form textarea {
+    margin-bottom: 1vw;
+    resize: none;
+    background-color: #485460;
+    border: none;
+    color: white;
+}
+
+#formContainer form input::placeholder, textarea::placeholder {
+    color: #bdc3c7;
+}
+
+#formContainer form input:focus, textarea:focus {
+    outline: none;
+}
+
+#formContainer form p {
+    margin: 0;
+}
+
+#formContainer form button {
+    border: none;
+    background-color: #27ae60;
+    padding: 1vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    width: min-content;
+    color: white;
+    align-self: flex-end;
+}
+
+
+
 #footerContainer {
     width: 100vw;
     background-color: black;
@@ -253,6 +326,10 @@ body {
         margin: 0;
         margin-top: 5vw;
         margin-bottom: 5vw;
+    }
+
+    #formContainer form {
+        width: 80vw;
     }
 
     #footerContainer {
