@@ -328,6 +328,11 @@ body {
         margin-bottom: 5vw;
     }
 
+    #formContainer p {
+        font-size: 2.5vw;
+        width: 70vw;
+    }
+
     #formContainer form {
         width: 80vw;
     }
