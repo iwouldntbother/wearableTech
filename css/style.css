@@ -353,6 +353,10 @@ body {
         margin-left: 0;
     }
 
+    #interactiveContainer {
+        display: none;
+    }
+
     #storyHolder {
         width: 80vw;
         margin: 0;
