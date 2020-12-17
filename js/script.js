@@ -194,6 +194,85 @@ document.getElementById("formButton").addEventListener("click", function(){
 })
 
 
+//
+// Interactive
+//
+
+dragElement(document.getElementById("handImage"));
+
+var barriersOpen = false;
+
+function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    elmnt.onmousedown = dragMouseDown;
+
+    function dragMouseDown(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // get the mouse cursor position at startup:
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        document.onmouseup = closeDragElement;
+        // call a function whenever the cursor moves:
+        document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+        e = e || window.event;
+        e.preventDefault();
+        // calculate the new cursor position:
+        pos1 = pos3 - e.clientX;
+        pos2 = pos4 - e.clientY;
+        pos3 = e.clientX;
+        pos4 = e.clientY;
+        // set the element's new position:
+        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+        // stop moving when mouse button is released:
+        document.onmouseup = checkScanner();
+        document.onmousemove = null;
+    }
+
+    function checkScanner() {
+
+        var containerWidth = document.getElementById("barriersImage").offsetWidth
+        var containerHeight = document.getElementById("barriersImage").offsetHeight
+
+        var posX = document.getElementById("handImage").offsetLeft
+        var posY = document.getElementById("handImage").offsetTop
+
+        console.log(containerWidth, containerHeight)
+        console.log(posX, posY)
+
+        var xPercent = posX / containerWidth
+        var yPercent = posY / containerHeight
+
+        console.log(xPercent, yPercent)
+
+        if (barriersOpen == false && xPercent > 0.58 && xPercent < 0.64 && yPercent > 0.34 && yPercent < 0.42) {
+            console.log("Scan Success")
+            document.getElementById("barriersImage").setAttribute("src", "images/Barriers2open.svg");
+            barriersOpen = true;
+            setTimeout(() => {
+                document.getElementById("barriersImage").setAttribute("src", "images/Barriers2.svg");
+                barriersOpen = false;
+            }, 5000)
+        }
+
+        // if (posX > 858 && posX < 926 && posY > 524 && posY < 573) {
+        //     console.log("Scan success")
+        // }
+    }
+}
+
+
+
+
+
+
 // 
 // Loading Terminal
 // 

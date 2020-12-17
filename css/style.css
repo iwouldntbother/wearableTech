@@ -132,6 +132,38 @@ body {
     margin-left: -2vw;
 }
 
+#interactiveContainer {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+}
+
+#interactiveText {
+    position: absolute;
+    top: 0;
+    left: 1vw;
+}
+
+#barriersImage {
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+#handImage {
+    width: 20vw;
+    height: 20vw;
+    overflow: visible;
+    position: absolute;
+    bottom: 5vw;
+    right: 0;
+    cursor: grab;
+}
+
+#handImage:active {
+    cursor: grabbing;
+}
+
 #storyContainer {
     width: 100vw;
     display: flex;
